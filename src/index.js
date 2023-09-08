@@ -1,17 +1,28 @@
+//  Import Area
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Comp2 from './components/Comp2';
+import Comp3 from './components/Comp3';
+import {Comp1} from './components/Comp1'; // this is names import
+import Comp4 from './components/Comp4';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Let's create our component
+
+// Classical Function defination
+function App(){
+  return <div>
+          <Comp1 />
+          <Comp2 />
+          <Comp3 />
+          <Comp4 />
+        </div>
+}
+
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
